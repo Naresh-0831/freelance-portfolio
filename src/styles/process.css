@@ -1,0 +1,158 @@
+/* =========================
+   PROCESS
+========================= */
+
+.process {
+  padding: var(--section-padding) 0;
+  background: transparent;
+  border-top: 1px solid var(--border);
+}
+.process-heading {
+  max-width: 760px;
+}
+
+/* =========================
+   PROCESS GRID
+========================= */
+
+.process-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0;
+  margin-top: 70px;
+}
+
+.process-card {
+  position: relative;
+  min-height: 260px;
+  padding: 0 32px;
+  border-left: 1px solid var(--border);
+}
+
+.process-card:first-child {
+  padding-left: 0;
+  border-left: none;
+}
+
+.process-card:last-child {
+  padding-right: 0;
+}
+
+/* =========================
+   TOP
+========================= */
+
+.process-top {
+  display: flex;
+  align-items: center;
+  margin-bottom: 45px;
+}
+
+.process-number {
+  color: var(--accent);
+  font-size: var(--text-label);
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+
+.process-line {
+  flex: 1;
+  height: 1px;
+  margin-left: 18px;
+  background: var(--border);
+}
+
+/* =========================
+   CONTENT
+========================= */
+
+.process-card h3 {
+  margin-bottom: 16px;
+  font-size: var(--text-card-title);
+  line-height: 1.1;
+  letter-spacing: -1.2px;
+}
+
+.process-card p {
+  max-width: 230px;
+  color: var(--text-secondary);
+  font-size: var(--text-body);
+  line-height: 1.65;
+}
+
+/* =========================
+   HOVER
+========================= */
+
+.process-card {
+  transition: transform var(--transition);
+}
+
+.process-card:hover {
+  transform: translateY(-5px);
+}
+
+/* =========================
+   TABLET
+========================= */
+
+@media (max-width: 900px) {
+  .process-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 50px 0;
+  }
+
+  .process-card {
+    min-height: 220px;
+  }
+
+  .process-card:nth-child(3) {
+    padding-left: 0;
+    border-left: none;
+  }
+
+  .process-card:nth-child(4) {
+    padding-right: 0;
+  }
+}
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 600px) {
+  .process {
+    padding: var(--section-padding) 0;
+  }
+
+  .process-grid {
+    grid-template-columns: 1fr;
+    gap: 0;
+    margin-top: 50px;
+  }
+
+  .process-card,
+  .process-card:first-child,
+  .process-card:last-child {
+    min-height: auto;
+    padding: 26px 0;
+    border-left: none;
+    border-bottom: 1px solid var(--border);
+  }
+
+  .process-card:last-child {
+    border-bottom: none;
+  }
+
+  .process-top {
+    margin-bottom: 28px;
+  }
+
+  .process-card h3 {
+    font-size: var(--text-card-title);
+  }
+
+  .process-card p {
+    max-width: 100%;
+  }
+}
